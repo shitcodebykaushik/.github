@@ -1,0 +1,16 @@
+name: Hello World Workflow
+on:
+    push:
+        branches:
+            - main  # Trigger on push to main branch
+jobs:
+    say-hello:
+        runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+        steps:
+           - name: Greet the world 
+             run: echo "Hello world!" 
+           
+           - name: List files in the current directory
+             run: ls -la  # List all files in the current directory
+
+        
