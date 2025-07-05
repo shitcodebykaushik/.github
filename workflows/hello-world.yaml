@@ -1,16 +1,19 @@
 name: Hello World Workflow
-on:
-    push:
-        branches:
-            - main  # Trigger on push to main branch
-jobs:
-    say-hello:
-        runs-on: ubuntu-latest  # Use the latest Ubuntu runner
-        steps:
-           - name: Greet the world 
-             run: echo "Hello world!" 
-           
-           - name: List files in the current directory
-             run: ls -la  # List all files in the current directory
 
-        
+on:
+  push:
+    branches:
+      - master # Important: Your screenshot shows your branch is 'master', not 'main'. Adjust this line.
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the world
+        run: echo "Hello world!"
+
+      - name: List files in the current directory
+        run: ls -la
+
+      - name: Display current date and time
+        run: date # You also removed this step from your file, let's put it back for completeness.
